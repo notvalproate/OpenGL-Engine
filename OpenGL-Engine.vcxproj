@@ -457,6 +457,7 @@
     <None Include="assets\shaders\basic.shader" />
     <None Include="assets\shaders\hud.shader" />
     <None Include="assets\shaders\lightcube.shader" />
+    <None Include="README.md" />
     <None Include="src\vendor\glm\detail\func_common.inl" />
     <None Include="src\vendor\glm\detail\func_common_simd.inl" />
     <None Include="src\vendor\glm\detail\func_exponential.inl" />
