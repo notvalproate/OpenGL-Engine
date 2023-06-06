@@ -33,36 +33,10 @@ Camera::Camera() {
 	pitch = 0.0;
 }
 
-Camera::Camera(const float& speed, const float& sens, const float& f) {
-	flag = 1;
-	zoomFactor = 1;
-	flashlightOn = 0;
-
-	vel = 0.0f;
-	jumpflag = true;
-	releasedctrl = false;
-	movingforward = false;
-
-	cameraPosition = glm::vec3(0.0f, 1.25f, 0.0f);
-	cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-	cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
-
-	viewMatrix = glm::mat4(1.0f);
-	viewMatrix = glm::lookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
-
+Camera::Camera(const float& speed, const float& sens, const float& f) : Camera() {
 	fov = f;
-	projectionMatrix = glm::mat4(1.0f);
-	projectionMatrix = glm::perspective(glm::radians(fov), (float)16.0 / (float)9.0, 0.1f, 100.0f);
-
 	cameraSpeed = speed;
 	cameraSens = sens;
-
-	currentFrame = 0.0;
-	deltaTime = 0.0;
-	lastFrame = 0.0;
-
-	yaw = 0.0;
-	pitch = 0.0;
 }
 
 void Camera::CameraUpdate(GLFWwindow* window, const float& deltaTime, Shader& shader) {

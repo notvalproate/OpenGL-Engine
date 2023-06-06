@@ -296,9 +296,9 @@ int main() {
 		//Rendering Scene
 	
 		float k = 0.0f;
-		float currentFrame = 0.0f;
-		float deltaTime = 0.0f;
-		float lastFrame = 0.0f;
+		double currentFrame = 0.0f;
+		double deltaTime = 0.0f;
+		double lastFrame = 0.0f;
 
 		while (!glfwWindowShouldClose(window)) {
 			currentFrame = glfwGetTime();
